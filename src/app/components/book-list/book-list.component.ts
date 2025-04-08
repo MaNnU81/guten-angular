@@ -1,11 +1,12 @@
 import { Component, effect, inject, signal } from '@angular/core';
 import { BookService } from '../../services/book.service';
 import { CommonModule } from '@angular/common';
+import { CardComponent } from '../card/card.component';
 
 @Component({
-  selector: 'app-book-list',
+  selector: 'ul[book-list]',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CardComponent],
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.scss']
 })

@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
-  selector: 'app-card',
+  selector: 'li[book-card]',
   imports: [],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-
+ title = input.required<string>()
+ cover = input.required<string>()
 }

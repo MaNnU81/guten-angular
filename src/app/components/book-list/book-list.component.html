@@ -1,33 +1,8 @@
-<div class="pagination">
-    <button (click)="prevPage()" [disabled]="bookService.page() === 1">
-      ‹ Indietro
-    </button>
-    <span>Pagina {{ bookService.page() }}</span>
-    <button (click)="nextPage()">Avanti ›</button>
-  </div>
 
-<div class="book-grid">
-    <div *ngFor="let book of books()" class="book-card">
-      <h3>{{ book.title }}</h3>
-      
-      <!-- <div *ngIf="book.authors?.length" class="authors">
-        {{ book.authors.map(a => a.name).join(', ') }}
-      </div> -->
-  
-      <img *ngIf="book.formats?.['image/jpeg']" 
-           [src]="book.formats['image/jpeg']" 
-           alt="Copertina di {{ book.title }}"
-           class="book-cover">
-    </div>
-  </div>
-  
-  <div class="pagination">
-    <button (click)="prevPage()" [disabled]="bookService.page() === 1">
-      ‹ Indietro
-    </button>
-    <span>Pagina {{ bookService.page() }}</span>
-    <button (click)="nextPage()">Avanti ›</button>
-    <button (click)="scrollToTop()" class="back-to-top" title="Torna all'inizio">
-        ↑ Torna su
-      </button>
-  </div>
+
+  <li *ngFor="let book of books()" book-card title="{{ book.title }}" class="book-card"
+  cover="{{book.formats['image/jpeg']}}" >
+  </li>
+ 
+
+

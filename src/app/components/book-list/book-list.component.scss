@@ -1,47 +1,23 @@
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    padding: 20px;
-    margin-top: 20px;
-    position: relative;
-  }
+.book-cover {
+  border: solid 2px blue;
+  min-height: 350px;
   
-  .pagination button {
-    padding: 8px 16px;
-    background: #4285f4;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
   
-  .pagination button:hover:not(:disabled) {
-    background: #3367d6;
-    transform: translateY(-1px);
-  }
-  
-  .pagination button:disabled {
-    background: #cccccc;
-    cursor: not-allowed;
-  }
-  
-  /* Stile specifico per "Torna su" */
-  .pagination button.back-to-top {
-    background: #ff7043;
-    position: absolute;
-    right: 20px;
-  }
-  
-  .pagination button.back-to-top:hover {
-    background: #f4511e;
-  }
+  -webkit-box-shadow: 4px 6px 14px 0px rgba(63, 57, 222, 1);
+  -moz-box-shadow: 4px 6px 14px 0px rgba(63, 57, 222, 1);
+  box-shadow: 4px 6px 14px 0px rgba(63, 57, 222, 1);
+}
 
-  .book-cover{
-    border: solid 2px blue;
-    -webkit-box-shadow: 4px 6px 14px 0px rgba(63,57,222,1);
--moz-box-shadow: 4px 6px 14px 0px rgba(63,57,222,1);
-box-shadow: 4px 6px 14px 0px rgba(63,57,222,1);
+:host {
+  display: flex;
+  overflow: scroll;
+  gap: 16px;
+}
+
+.img-container {
+ 
+  img {
+    object-fit: contain;
+    
   }
+}
